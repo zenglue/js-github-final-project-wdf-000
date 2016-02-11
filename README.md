@@ -7,12 +7,9 @@
 
 It's time to put all your JavaScript skills to the test to build an app combining everything you've learned about JavaScript so far. At Flatiron School, we rely heavily on traditional git work flow to manage our curriculum. A huge part of that means opening issues when you find something that needs to be fixed or updated on a piece of curriculum. 
 
-Typically, we open an issue directly through GitHub's browser interface. But, we can actually use their API endpoint to open issues in our own app. GitHub's API only let's you create an issue if you have pull access to the repo.
+Typically, we open an issue directly through GitHub's browser interface. But, we can actually use their API endpoint to open issues in our own app. GitHub's API only let's you create an issue if you have pull access to the repo.  You'll need to read the [github API docs](https://developer.github.com/v3/) to figure out the correct endpoint to hit and what to send it to open an issue.
 
 ## Instructions
-
-You'll be coding your solution in `js/script.js`.
-You'll need to visit [GitHub](https://github.com/settings/tokens) to create an access token for your application. 
 
 In `index.html` you'll find a form with four input fields, for repository name, repository owner, issue title, and issue body.
 
@@ -23,5 +20,5 @@ This endpoint should create an issue based on the information the user entered i
 
 If the POST request fails, the function should print out `Post error: error_name`to the console.
 
-You will need to update the tests a little bit in order to get them to work, that way you're opening issues on your own repos and not Flatiron's! Just look for the comments in `spec/script_spec.js`.
+All the spec's AJAX requests are mocked out meaning they won't actually make requests to github and we've simulated the response you'd get from the actual API.  This is common when you don't want your tests to have an external dependency.  It both makes the tests faster and makes sure they don't fail just because of some issue with the API.
 
